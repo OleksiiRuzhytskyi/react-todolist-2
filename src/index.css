@@ -18,7 +18,7 @@ code {
 }
 
 .item-text {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .listItems {
@@ -29,6 +29,7 @@ code {
 
 .flex {
   border: 2px solid red;
+  border-radius: 10px;
   margin-top: 5px;
   display: flex;
   align-items: center;

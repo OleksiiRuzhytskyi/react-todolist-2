@@ -36,17 +36,18 @@ class CustomInput extends React.Component {
 	}
 
 	handleToggle(id) {
+		console.log('before', this.state.todos)
 		this.setState({
 			todos: this.state.todos
 			.map(
-				item => item.id === id ? {complete: !item.complete} : {complete: true}
+				item => item.id === id ? {...item, complete: !item.complete} : {...item}
 				)
 		})
-		console.log('handleTodos', this.state.todos)
+		console.log('after', this.state.todos)
 	}
 
 	render() {
-		console.log(this.state.todos)
+		console.log('render', this.state.todos)
 		return (
 			<>
 				<h1>List Task: {this.state.todos.length}</h1>
